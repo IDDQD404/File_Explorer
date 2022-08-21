@@ -7,5 +7,9 @@ export declare class AppController {
     getListOfFilesInPahtFolder(path: any): any[];
     getFileByPath(path: any, res: any): StreamableFile;
     getFileStreamByPath(path: any, res: any): StreamableFile;
-    uploadFile(file: Express.Multer.File, path: any): void;
+    uploadFile(file: Express.Multer.File, path: any): {
+        response: string;
+    };
+    createNewFolder(path: any): void;
+    deleteFileOrFolder(path: any): void;
 }
